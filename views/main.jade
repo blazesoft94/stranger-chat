@@ -1,0 +1,28 @@
+doctype5
+html
+	head
+		title= "jChat 0.0.1"
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+
+		link(rel='stylesheet', media="screen", href='//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css')
+		link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css')
+		link(rel='stylesheet', href='/style.css')
+
+		script(src='http://code.jquery.com/jquery-1.7.1.min.js')
+		script(src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js')
+		script(src='//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js')
+
+		script(src='/chat.js')
+		script(src='/socket.io/socket.io.js')
+
+	body
+		div.container
+			div(style="height: 2%")
+			div.content(style='height: 75%; border: solid 1px #999; overflow-y: scroll; word-wrap:normal;')#content
+			div(style="height: 2%")
+			div(style="height: 19%")
+				form(role = "form", onsubmit= "return false")#form		
+					input.form-control(type = "text", autofocus, autocomplete="off", style = "width:")#msg
+					br
+					input.col-md-4.col-md-offset-8.btn.btn-md.btn-info(type='button',value='Send')#send
+			div(style="height: 2%")
